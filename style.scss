@@ -1,0 +1,144 @@
+$red:   #E87461;
+$green: #62AB37;
+
+body {
+	background: #f5f5f5;
+	font-family: 'Lato', sans-serif;
+}
+
+h1 {
+	text-align:center;
+	font-weight: 300;
+}
+
+.wrapper {
+	width: 80%;
+	display: block;
+	margin:auto;
+}
+
+.container {
+	width: 50%;
+	text-align:center;
+	display:block;
+	float: left;
+}
+
+ul {
+	list-style: none;
+	padding-left: 0px;
+}
+
+li { 
+	background: none;
+	padding: 15px;
+	&::nth-child(odd) { background: #fff; }
+	&:nth-child(odd) { background: #fff; }
+	&.alert { background: #e87461; color: #fff;}
+}
+
+button {
+	padding: 10px 15px;
+	border: 1px solid;
+	background: none;
+	border-radius: 3px;
+	cursor: pointer;
+
+	&.green {
+		color: $green;
+		border-color: $green;
+	}
+	&.red {
+		color: $red;
+		border-color: $red;
+	}
+}
+
+.light {
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	background: gray;
+	display:block;
+	margin: auto;
+  	text-transform: uppercase;
+  	transition: .4s all ease-in;
+  	margin-bottom: 10px;
+
+  	i {
+  		color: #fff;
+  		margin-top:50px;
+  		display: inline-block;
+		margin-top: 30%;
+		font-size: 6rem;
+  	}
+}
+
+.light.false {
+  	background-color: $green;
+  	.occupied {
+  		display: none;
+  	}
+  	.unoccupied {
+  		display: none;
+  	}
+}
+
+.light.true {
+  	background-color: $red;
+}
+
+.light-container.true {
+	.occupied {
+  		display: block;
+  	}
+  	.unoccupied {
+  		display: none;
+  	}
+  	.icon-thumbs-up {
+	    -ms-transform: rotate(180deg); /* IE 9 */
+	    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+	    transform: rotate(180deg);
+	}
+}
+
+.icon-thumbs-up {
+	/* Firefox */
+	-moz-transition: all 1s ease;
+	/* WebKit */
+	-webkit-transition: all 1s ease;
+	/* Opera */
+	-o-transition: all 1s ease;
+	/* Standard */
+	transition: all 1s ease;
+}
+
+.occupied {
+	display:none;
+}
+
+.icon-heart {
+	color: #E87461;
+}
+
+.select-container {
+	display:none;
+	p {
+		display: inline-block;
+	}
+	&.active {
+		display:block;
+	}
+}
+
+#notify {
+	display: block;
+	margin: auto;
+	margin-bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+    	width: 100%;
+    }
+}
