@@ -24,8 +24,6 @@
         	</div>
         <p class="unoccupied">It's all yours!</p>
         <p class="occupied" >Don't worry you'll probably be late for work.</p>
-        <button onclick="changeState(false)">false</button>
-        <button onclick="changeState(true)">true</button></br>
       </div> <!-- //container -->
       <div class="queue-container container" ng-controller="queue">
         <h4>Queue</h4>
@@ -33,6 +31,7 @@
         <div class="select-container">
           <p>I am </p>
           <select id="people">
+              <!-- put all your flatmates names here -->
               <option>select</option>
               <option>Ariana</option>
               <option>Craig</option>
@@ -61,9 +60,6 @@
       </div>
     </div>
     <i class="fa fa-heart-o"></i>
-    <div class="keen-container container">
-      <div id="keen-chart"></div>
-    </div>
     <script src="fun.js"></script>
   </body>
 </html>
